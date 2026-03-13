@@ -18,10 +18,10 @@ const Home = () => {
       title: 'Informatique',
       description: 'Solutions informatiques complètes pour votre entreprise',
       services: [
-        'Réparation ordinateurs et périphériques',
-        'Installation logiciels et systèmes',
-        'Protection antivirus et sécurité',
-        'Vente accessoires informatiques',
+        'Réparation d\'ordinateurs et périphériques',
+        'Installation de logiciels et systèmes',
+        'Protection antivirus et sécurité informatique',
+        'Vente d\'accessoires informatiques',
       ],
       image: '/assets/images/services/informatique.jpeg',
     },
@@ -42,7 +42,7 @@ const Home = () => {
       title: 'Imprimerie',
       description: 'Impression professionnelle pour tous vos supports',
       services: [
-        'Impression T-shirts personnalisés',
+        'Impression de T-shirts personnalisés',
         'Flyers et brochures',
         'Badges et cartes de visite',
         'Supports publicitaires',
@@ -108,7 +108,7 @@ const Home = () => {
             <div className="inline-flex items-center space-x-4 mb-4">
               <img 
                 src="/assets/images/logo.jpeg" 
-                alt="Fraternité Groupe Logo" 
+                alt="Fraternite Groupe Logo" 
                 className="w-20 h-20 rounded-xl object-cover shadow-2xl"
               />
             </div>
@@ -123,7 +123,7 @@ const Home = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-xl md:text-2xl mb-8 text-gray-300"
           >
-            Votre partenaire de confiance en Côte d'Ivoire (ville de Bouaké)
+            Votre partenaire de confiance en Côte d'Ivoire (ville de Bouaké, Yamoussoukro et environs)
           </motion.p>
 
           <motion.p
@@ -193,9 +193,9 @@ const Home = () => {
             <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Fraternité Groupe Entreprise SARL est une entreprise ivoirienne multi-services,
-              fondée en octobre 2021 par M. BROU Marius Kouassi Picard qui en est le Directeur Général, 
+              fondée en octobre 2021 par M. BROU Marius Kouassi Picard qui en est le Directeur Général. 
               Nous combinons expertise, qualité et proximité pour vous offrir des solutions
-              adaptées à vos projets (majoritairement dans la ville de Bouaké).
+              adaptées à vos projets (majoritairement dans la ville de Bouaké et Yamoussoukro).
             </p>
           </motion.div>
 
@@ -260,6 +260,58 @@ const Home = () => {
               Voir tous nos services
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Section BTP</h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Génie civil, travaux publics, lotissement, promotion immobilière et
+              services techniques.
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link
+              to="/btp"
+              className="px-5 py-2 rounded-full bg-white text-slate-900 text-sm font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Accéder à la section BTP
+            </Link>
+            <Link
+              to="/btp/services"
+              className="px-5 py-2 rounded-full bg-white/10 text-white text-sm font-semibold hover:bg-white/20 transition-colors"
+            >
+              Services BTP
+            </Link>
+            <Link
+              to="/btp/projets"
+              className="px-5 py-2 rounded-full bg-white/10 text-white text-sm font-semibold hover:bg-white/20 transition-colors"
+            >
+              Projets réalisés
+            </Link>
+            <Link
+              to="/btp/chantiers"
+              className="px-5 py-2 rounded-full bg-white/10 text-white text-sm font-semibold hover:bg-white/20 transition-colors"
+            >
+              Photos des chantiers
+            </Link>
+            <Link
+              to="/btp/devis"
+              className="px-5 py-2 rounded-full bg-orange-500 text-white text-sm font-semibold hover:bg-orange-600 transition-colors"
+            >
+              Demander un devis
+            </Link>
+          </div>
         </div>
       </section>
 

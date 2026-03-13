@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services" className="hover:text-orange-500 transition-colors">
-                  Sécurité Électronique
+                  Sécurité électronique
                 </Link>
               </li>
               <li>
@@ -108,6 +108,9 @@ const Footer = () => {
             <Link to="/" className="text-gray-400 hover:text-orange-500 transition-colors">
               Accueil
             </Link>
+            <Link to="/btp" className="text-gray-400 hover:text-orange-500 transition-colors">
+              BTP
+            </Link>
             <Link to="/services" className="text-gray-400 hover:text-orange-500 transition-colors">
               Services
             </Link>
@@ -124,13 +127,13 @@ const Footer = () => {
               <FaFacebook />
             </a>
             <a
-              href=""
+              href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
               className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
               className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
             >
               <FaLinkedin />

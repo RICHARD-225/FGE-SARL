@@ -8,13 +8,17 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Accueil', path: '/' },
+    { name: 'BTP', path: '/btp' },
     { name: 'Services', path: '/services' },
     { name: 'Galerie', path: '/galerie' },
     { name: 'Avis', path: '/avis' },
     { name: 'Contact', path: '/contact' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    path === '/'
+      ? location.pathname === '/'
+      : location.pathname === path || location.pathname.startsWith(`${path}/`);
 
   return (
     <nav className="bg-slate-900 text-white shadow-lg fixed w-full top-0 z-50">
@@ -23,11 +27,11 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/assets/images/logo.jpeg" 
-              alt="Fraternité Groupe Logo" 
+              alt="Fraternite Groupe Logo" 
               className="w-12 h-12 rounded-lg object-cover"
             />
             <div className="flex flex-col">
-              <span className="font-bold text-lg">Fraternité Groupe</span>
+              <span className="font-bold text-lg">Fraternite Groupe</span>
               <span className="text-xs text-orange-500">Entreprise SARL</span>
             </div>
           </Link>
@@ -82,3 +86,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

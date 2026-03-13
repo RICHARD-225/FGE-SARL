@@ -54,7 +54,7 @@ const Services = () => {
     },
     {
       icon: <FaShieldAlt />,
-      title: 'Sécurité Électronique',
+      title: 'Sécurité électronique',
       description: 'Solutions de sécurité modernes pour protéger vos biens et votre famille. Installation professionnelle et maintenance garantie.',
       services: [
         'Caméras de surveillance HD/4K',

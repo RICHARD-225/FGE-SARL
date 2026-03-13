@@ -31,7 +31,7 @@ const ContactForm = () => {
     setIsError(false);
 
     try {
-      console.log('🚀 Envoi EmailJS avec:', {
+      console.log('➡️ Envoi EmailJS avec:', {
         SERVICE: EMAILJS_CONFIG.SERVICE_ID,
         TEMPLATE: EMAILJS_CONFIG.TEMPLATE_ID,
         DATA: {
@@ -41,7 +41,6 @@ const ContactForm = () => {
         }
       });
 
-      // Envoyer l'email via EmailJS
       const response = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
@@ -67,13 +66,12 @@ const ContactForm = () => {
         text: error.text,
         fullError: error
       });
-      
+
       setIsSubmitting(false);
       setIsError(true);
-      
-      // Message d'erreur détaillé basé sur le type d'erreur
+
       let errorMsg = '❌ Erreur ! Impossible d\'envoyer le message. ';
-      
+
       if (error.status === 400) {
         errorMsg += 'Les variables du template ne correspondent pas. Vérifiez le dashboard EmailJS.';
       } else if (error.status === 401) {
@@ -83,7 +81,7 @@ const ContactForm = () => {
       } else {
         errorMsg += 'Veuillez réessayer ou contacter directement.';
       }
-      
+
       setSubmitMessage(errorMsg);
 
       setTimeout(() => {
